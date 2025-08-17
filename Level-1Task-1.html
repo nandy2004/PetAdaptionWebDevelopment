@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Level 1 Task 1</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      background-color: #f4f4f4;
+      background-image: url(https://t3.ftcdn.net/jpg/09/77/09/54/360_F_977095499_ncAfqYpPLPr3wPo9Ay62mxnDydxUrMwM.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-position: center;
+      font-family: Arial, sans-serif;
+    }
+
+    nav {
+      background-color: #4b0082;
+      padding: 10px;
+      margin-bottom: 20px;
+    }
+
+    nav a {
+      color: white;
+      margin-right: 20px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    h1, h2, h4 {
+      color: #f8f5f5;
+    }
+    p {
+      color: #1a237e; /* Dark indigo */
+      background-color: rgba(255, 255, 255, 0.85);
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 500px;
+      font-size: 16px;
+      line-height: 1.6;
+      text-align: justify;
+      margin-bottom: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+
+    img {
+      width: 300px;
+      border-radius: 10px;
+      margin-top: 10px;
+    }
+
+    form {
+      margin-top: 30px;
+      padding: 15px;
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      max-width: 400px;
+    }
+
+    input[type="text"], input[type="submit"] {
+      padding: 10px;
+      width: 90%;
+      margin-top: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    input[type="submit"] {
+      background-color: #4b0082;
+      color: white;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #5e0aa3;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Menu -->
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Available Pets</a>
+    <a href="#">Adoption Process</a>
+    <a href="#">Contact Us</a>
+
+  </nav>
+
+  <!-- Simple Webpage Content -->
+  <h1>Welcome to HappyPaws Pet Adoption</h1>
+  <p>Adopting a pet is a beautiful way to give an animal a second chance at life.Millions of dogs and cats are in shelters waiting for a loving home.When you adopt, you're not just saving a life, you’re gaining a loyal companion who brings joy, comfort, and unconditional love.Every adopted pet helps make space for another animal in need. Join us in creating a better world for our furry friends adopt, don’t shop!</p>
+  <img src="https://img.freepik.com/free-vector/adopt-pet-illustration-with-dog-cat_23-2148536218.jpg">
+
+  <!-- Basic Form -->
+  <h2>Intrested in Adoptiong?</h2>
+  <h4>Please fill the form below if you are intresting adopting</h4>
+<form>
+  <label for="fullname">Full Name:</label><br>
+  <input type="text" id="fullname" name="fullname" placeholder="Your full name" required><br><br>
+
+  <label for="email">Email Address:</label><br>
+  <input type="text" id="email" name="email" placeholder="you@example.com" required><br><br>
+
+  <label for="phone">Phone Number:</label><br>
+  <input type="text" id="phone" name="phone" placeholder="123-456-7890"><br><br>
+
+  <label for="pet">Which pet are you interested in?</label><br>
+  <input type="text" id="pet" name="pet" placeholder="e.g., Max the Labrador"><br><br>
+
+  <label for="message">Why do you want to adopt a pet?</label><br>
+  <textarea id="message" name="message" rows="4" cols="40" placeholder="Write a few words..." required></textarea><br><br>
+
+  <input type="submit" value="Submit Interest">
+  </form>
+
+</body>
+</html>

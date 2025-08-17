@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Level 1 Task 2 - JavaScript</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      background-color: #f4f4f4;
+      background-image: url(https://t3.ftcdn.net/jpg/09/77/09/54/360_F_977095499_ncAfqYpPLPr3wPo9Ay62mxnDydxUrMwM.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-position: center;
+      font-family: Arial, sans-serif;
+    }
+    h1{
+      color: #fcf9f9;
+    }
+    p{
+      text-decoration-color: #0b0b0f;
+      color: #0b0b0f; /* Dark indigo */
+      background-color: rgba(255, 255, 255, 0.85);
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 500px;
+      font-size: 16px;
+      line-height: 1.6;
+      text-align: justify;
+      margin-bottom: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Find Your Future Pet</h1>
+  <p>Hello Pet Lovers! Welcome to our HAPPY PAWS PET ADOPTION ! here you can find different types of pets.Choose your pet to adopt.</p>
+
+  <button onclick="showRandomPet()">Show Pet</button>
+  <div id="petDisplay"></div>
+
+  <button id="colorBtn" onclick="changeColor()">Click to Choose pet color</button>
+  <button onclick="showInterest()">I'm Interested</button>
+  <h2 style="color: rgb(252, 248, 248);">🐾 Welcome to Our Pet Adoption Donation Program</h2>
+  <p style="color: black; max-width: 600px;">
+  Your generous donations help us provide food, shelter, and medical care to animals in need.  
+  Every contribution—big or small—brings us one step closer to giving every pet a loving home.  
+  Please consider donating to our foundation and directly supporting our adorable furry friends.  
+  Together, we can make a difference! ❤️</p>
+  <div class="calculator">
+  <p><label for="foundation">Donation for Foundation ($): </label>
+  <input type="number" id="foundation" placeholder="Enter amount" min="0"><br>
+  <label for="pets">Donation for Pets ($):</label>
+  <input type="number" id="pets" placeholder="Enter amount" min="0"><br></p>
+  <button onclick="calculateDonation()">Total Donation</button>
+  <p id="result"></p>
+  </div>
+
+  <script>
+    const pets = ["Max the Labrador", "Luna the Persian Cat", "Charlie the Beagle", "Bella the Siamese", "Daisy the Golden Retriever"];
+
+    function showRandomPet() {
+      const randomIndex = Math.floor(Math.random() * pets.length);
+      const selectedPet = pets[randomIndex];
+      document.getElementById("petDisplay").textContent="Meet: " + selectedPet + " 🐾";
+    }
+
+    function showInterest() {
+      alert("Thank you for your interest! We’ll contact you with adoption details soon.");
+    }
+    // Time-Based Greeting Alert
+      function showGreeting() {
+      const hour = new Date().getHours();
+      let greeting = "";
+      if (hour < 12) greeting = "Good morning!";
+      else if (hour < 18) greeting = "Good afternoon!";
+      else greeting = "Good evening!";
+      alert(greeting);
+    }
+
+    // Simple Calculator
+    function calculateDonation() {
+    const foundationAmount = parseFloat(document.getElementById("foundation").value);
+    const petsAmount = parseFloat(document.getElementById("pets").value);
+
+    if (isNaN(foundationAmount) || isNaN(petsAmount)) {
+    document.getElementById("result").textContent = "Please enter valid donation amounts.";
+    } else {
+    const total = foundationAmount + petsAmount;
+    document.getElementById("result").textContent = "Total Donation: $" + total;
+    }
+   }
+
+
+    function changeColor() {
+    const btn = document.getElementById('colorBtn');
+
+    // Randomly generate a color (optional fun)
+    const colors = ['#ff5722', '#4caf50', '#2196f3', '#9c27b0', '#f44336'];
+    const randomColor = colors[Math.floor(Math.random() * colors.length)];
+
+    btn.style.backgroundColor = randomColor;
+    btn.style.color = '#fff'; // make sure text stays visible
+  }
+  </script>
+
+</body>
+</html>
